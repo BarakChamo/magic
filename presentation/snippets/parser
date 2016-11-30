@@ -1,0 +1,8 @@
+// Parse a style string
+const color = cssParse.rule("color: orange");
+console.log(color.styleMap.get("color").value) // "orange"
+
+// Parse a stylesheet
+fetch("styles.css")
+  .then(response => CSS.parseStylesheet(response.body))
+  .then(styles => console.log(styles))

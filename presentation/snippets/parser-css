@@ -1,0 +1,14 @@
+/* Custom Functions */
+--awesome(...)
+
+/* Custom @-rules */
+@awesome('asd')
+
+/* CSS-like attributes */
+<img sizes="asdads asdasd" />
+
+/* Custom chroma-key function  */
+--chroma-key(green) // OMG can you imagine?!?
+
+/* Inherit from .header class */
+@inherit(.header)

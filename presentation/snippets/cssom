@@ -1,0 +1,25 @@
+// The new style map
+$(0).styleMap
+
+
+// Get a style value
+$(0).styleMap.get('width')
+
+
+// Set width with length type
+let w = new CSSLengthValue(200, 'px')
+$(0).styleMap.set('width', w)
+
+
+// Compound types
+let w = new CSSLengthValue({
+  percent: 50,
+  px: -45,
+})
+
+>> calc(50% - 45px)
+
+
+// Type operation
+w = w.add(new CSSLengthValue(50, 'px'))
+w = w.divide(2)

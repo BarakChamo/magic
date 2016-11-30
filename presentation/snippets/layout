@@ -1,0 +1,62 @@
+/* Define a new layout class */ 
+class MyLayout {
+    static get inputProperties() { return ['width', 'height'] }
+    static get childrenInputProperties() { return [] }
+
+    layout(children, constraintSpace, styleMap, breakToken) {
+        const fragments = [];
+
+        // Resolve our width using the available width in 'constraintSpace', and
+        // our computed width property.
+        let width = resolveWidth(constraintSpace, styleMap.get('width'));
+
+        // Create a new constraint space for our children to consume.
+        let childConstraintSpace = new ConstraintSpace(constraintSpace);
+        childConstraintSpace.width = width;
+
+        // Track the used height, min and max content.
+        let height = 0;
+        let minContent = 0;
+        let maxContent = 0;
+
+        for (let child of children) {
+            // Check if the child is out of flow positioned.
+            const childPosition = child.styleMap.get('position');
+
+            // Layout the in flow child.
+            const childFragment = child.doLayout(childConstraintSpace);
+
+            // Position the child.
+            childFragment.x = 0;
+            childFragment.y = height;
+
+            // Update our current height, min and max content.
+            height += childFragment.height;
+            minContent = Math.max(childFragment.minContent, minContent);
+            maxContent = Math.max(childFragment.maxContent, maxContent);
+        }
+
+        // Resolve the height.
+        height = resolveHeight(constraintSpace, styleMap.get('height'), height);
+
+        return {
+            minContent: minContent,
+            maxContent: maxContent,
+            width: width,
+            height: height,
+            fragments: fragments,
+            unPositionedChildren: absoluteChildren.concat(fixedChildren),
+            breakToken: null
+        };
+    }
+}
+
+
+/* Register the new layout */
+registerLayout('awesome', MyLayout)
+
+
+/* Apply a custom layout */
+.awesome-container {
+  display: layout(awesome);
+}

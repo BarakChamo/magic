@@ -1,0 +1,30 @@
+:root {
+  --palette-root:
+}
+
+
+/* Register a custom property */
+CSS.registerProperty({
+  name: '--palette-root',
+  syntax: '<color>',
+  inherits: true,
+  initialValue: 'hsl(174, 90%, 66%)'
+})
+
+body {
+  --primary-theme-color: tomato;
+  transition: --primary-theme-color 1s ease-in-out;
+}
+body.night-theme {
+  --primary-theme-color: darkred;
+}
+
+.button {
+  --stop-color: red;
+  background: linear-gradient(var(--stop-color), black);
+  transition: --stop-color 1s;
+}
+
+.button:hover {
+  --stop-color: green;
+}
