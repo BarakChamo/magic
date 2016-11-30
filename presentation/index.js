@@ -171,7 +171,7 @@ export default class Presentation extends React.Component {
                 <table className="rounded-corners">
                   <tbody>
                     <tr><td></td><td></td><td></td></tr>
-                    <tr><td></td><td style={{padding: 15}}><Code>border-radius</Code></td><td></td></tr>
+                    <tr><td></td><td style={{padding: 15}}><Code>"border-radius"</Code></td><td></td></tr>
                     <tr><td></td><td></td><td></td></tr>
                   </tbody>
                 </table>
@@ -185,7 +185,7 @@ export default class Presentation extends React.Component {
                 <table className="rounded-corners">
                   <tbody>
                     <tr><td style={{backgroundColor:'transparent'}}><img src="sdfsfd" alt=""/></td><td></td><td style={{backgroundColor:'transparent'}}><img src="sdfsfd" alt=""/></td></tr>
-                    <tr><td></td><td style={{padding: 15}}><Code>border-radius</Code></td><td></td></tr>
+                    <tr><td></td><td style={{padding: 15}}><Code>"border-radius"</Code></td><td></td></tr>
                     <tr><td style={{backgroundColor:'transparent'}}><img src="sdfsfd" alt=""/></td><td></td><td style={{backgroundColor:'transparent'}}><img src="sdfsfd" alt=""/></td></tr>
                   </tbody>
                 </table>
@@ -527,8 +527,12 @@ $0.style.setProperty('width', 'calc(50% + ' + width + ')')`}>
             <Appear><Heading size={5}>Make a PR</Heading></Appear>
           </Slide>
 
-          <Slide transition={["slide"]} >
+          <Slide transition={["slide"]}>
             <dl>
+            <dt>WOW</dt>
+            <dd>Houdini Taskforce</dd>
+            <dd class="new-line"></dd>
+
             <dt>Houdini Demos</dt>
             <dd>surma</dd>
             <dd class="new-line"></dd>
@@ -539,10 +543,6 @@ $0.style.setProperty('width', 'calc(50% + ' + width + ')')`}>
 
             <dt>VFX</dt>
             <dd>acjdesigns</dd>
-            <dd class="new-line"></dd>
-
-            <dt>Spectacle</dt>
-            <dd>Formidable</dd>
             <dd class="new-line"></dd>
 
             <dt>Awesomeness!</dt>
