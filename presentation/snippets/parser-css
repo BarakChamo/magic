@@ -7,8 +7,20 @@
 /* CSS-like attributes */
 <img sizes="asdads asdasd" />
 
-/* Custom chroma-key function  */
+/* chroma-key function?  */
 --chroma-key(green) // OMG can you imagine?!?
+
+/* GIF frame selection?  */
+--gif-frame(10)
+
+/* Custom filter?  */
+--insta-wow(hipsterWow)
 
 /* Inherit from .header class */
 @inherit(.header)
+
+/* Generate a color scheme */
+@palette {
+  --base-color: orange;
+  --harmony: complementary;
+}

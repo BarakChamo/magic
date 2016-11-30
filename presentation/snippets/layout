@@ -1,4 +1,4 @@
-/* Define a new layout class */ 
+/* Define a new layout class */
 class MyLayout {
     static get inputProperties() { return ['width', 'height'] }
     static get childrenInputProperties() { return [] }
@@ -59,4 +59,9 @@ registerLayout('awesome', MyLayout)
 /* Apply a custom layout */
 .awesome-container {
   display: layout(awesome);
+  display: layout(myFlexbox);
+  display: layout(masonry);
+
+  --sides: 6;
+  display: layout(geomotry);
 }

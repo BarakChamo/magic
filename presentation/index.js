@@ -224,12 +224,12 @@ export default class Presentation extends React.Component {
               </Fill>
             </Layout>
           </Slide>
-
+{/*
           <Slide className="effect-container" transition={[]} style={{padding:0}}>
             <div className="effect-container" style={{backgroundImage: 'url(mindblown5.gif)'}}>
               <div className="effect" />
             </div>
-          </Slide>
+          </Slide> */}
 
           <Slide transition={[]} >
             <Layout className="standards">
@@ -241,7 +241,7 @@ export default class Presentation extends React.Component {
 
           <Slide transition={[]} >
             <div className="title">
-              <Heading fit caps size={6}>You can be a wizard too!</Heading>
+              <Heading fit caps size={6}>You can make CSS!</Heading>
             </div>
           </Slide>
 
@@ -322,8 +322,8 @@ export default class Presentation extends React.Component {
             { loc: [0, 2], title: "Custom functions" },
             { loc: [3, 5], title: "and @ rules"},
             { loc: [6, 8], title: "and CSS-like values"},
-            { loc: [9, 11], title: "So you could implement your own magic"},
-            { loc: [12, 14], title: "And extend the language itself"}
+            { loc: [9, 17], title: "So you could implement your own magic"},
+            { loc: [18, 26], title: "And extend the language itself"}
           ]}/>
 
           <Slide transition={["slide"]} >
@@ -335,9 +335,8 @@ export default class Presentation extends React.Component {
           <CodeSlide textSize={20} transition={[]} lang="css" code={require("raw!./snippets/props")} ranges={[
             { loc: [0, 0], title: "Props & Values API" },
             { loc: [0, 3], title: "Custom props (a.k.a variables)" },
-            { loc: [5, 12], title: "Register typed properties"},
-            { loc: [13, 20], title: "So you could manipulate them"},
-            { loc: [21, 30], title: "So you could manipulate them"}
+            { loc: [5, 15], title: "Register typed properties"},
+            { loc: [16, 33], title: "So you could manipulate them"}
           ]}/>
 
           <Slide transition={["slide"]} >
@@ -364,7 +363,7 @@ $0.style.setProperty('width', 'calc(50% + ' + width + ')')`}>
             { loc: [0, 6], title: "Get a value from the styleMap" },
             { loc: [8, 11], title: "Typed CSS Values"},
             { loc: [13, 20], title: "Computed Values"},
-            { loc: [22, 25], title: "Type Operations"}
+            { loc: [22, 34], title: "Type Operations"}
           ]}/>
 
           <Slide transition={["slide"]} >
@@ -391,7 +390,7 @@ $0.style.setProperty('width', 'calc(50% + ' + width + ')')`}>
             { loc: [5, 20], title: "Gather constraints"},
             { loc: [21, 37], title: "Calculate fragment layout"},
             { loc: [54, 56], title: "Register layout"},
-            { loc: [58, 62], title: "and apply it"},
+            { loc: [58, 64], title: "and apply it"},
           ]} />
 
           <Slide transition={["slide"]} >
@@ -418,12 +417,6 @@ $0.style.setProperty('width', 'calc(50% + ' + width + ')')`}>
             </Layout>
           </Slide>
 
-          <Slide className="effect-container" transition={["slide"]} style={{padding:0}}>
-            <div className="effect-container" style={{backgroundImage: 'url(mindblown1.gif)'}}>
-              <div className="effect" />
-            </div>
-          </Slide>
-
           <Slide transition={["slide"]} >
             <Layout>
               <Fill>
@@ -434,12 +427,6 @@ $0.style.setProperty('width', 'calc(50% + ' + width + ')')`}>
             </Layout>
           </Slide>
 
-          <Slide className="effect-container" transition={["slide"]} style={{padding:0}}>
-            <div className="effect-container" style={{backgroundImage: 'url(mindblown3.gif)'}}>
-              <div className="effect" />
-            </div>
-          </Slide>
-
           <Slide transition={["slide"]} >
             <Layout>
               <Fill>
@@ -448,18 +435,6 @@ $0.style.setProperty('width', 'calc(50% + ' + width + ')')`}>
                 </video>
               </Fill>
             </Layout>
-          </Slide>
-
-          <Slide className="effect-container" transition={["slide"]} style={{padding:0}}>
-            <div className="effect-container" style={{backgroundImage: 'url(mindblown4.gif)'}}>
-              <div className="effect" />
-            </div>
-          </Slide>
-
-          <Slide transition={["slide"]} >
-            <Heading size={1} fit caps lineHeight={1} textColor="white">
-              <span className="title">Worklets</span>
-            </Heading>
           </Slide>
 
           <Slide transition={["slide"]} >
@@ -490,6 +465,13 @@ $0.style.setProperty('width', 'calc(50% + ' + width + ')')`}>
             <Heading size={1} fit caps lineHeight={1} textColor="white">
               <span className="title">Can I Use?</span>
             </Heading>
+            <span className="title">
+              <Appear>
+                <Heading size={2} lineHeight={1}>
+                  <span className="title">nope...</span>
+                </Heading>
+              </Appear>
+            </span>
           </Slide>
 
           <Slide transition={["slide"]} >

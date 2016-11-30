@@ -20,6 +20,15 @@ let w = new CSSLengthValue({
 >> calc(50% - 45px)
 
 
-// Type operation
+// Length calculations
 w = w.add(new CSSLengthValue(50, 'px'))
 w = w.divide(2)
+
+// Transform manipulation
+t = new CSSTransformValue()
+
+t.add(
+  new CSSRotation(
+    new CSSAngleValue(angle, "deg")
+  )
+)

@@ -1,5 +1,5 @@
 :root {
-  --palette-root:
+  --palette-root: orange
 }
 
 
@@ -10,6 +10,9 @@ CSS.registerProperty({
   inherits: true,
   initialValue: 'hsl(174, 90%, 66%)'
 })
+
+/* Set a custom property (from JS!) */
+document.style.setProperty('--palette-root', 'lightblue')
 
 body {
   --primary-theme-color: tomato;
